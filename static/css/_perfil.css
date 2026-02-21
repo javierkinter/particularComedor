@@ -1,0 +1,74 @@
+
+.info{
+  text-align: center;
+  margin: 20px;
+  font-size: 15px;
+  color: black;
+}
+
+.caja{
+  display: inline-block;
+  border: 1px solid;
+  border-radius: 10px;
+  border-color: #a48467;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 50px;
+  background-color: #ddd9ce;
+}
+
+#dni{
+  margin-left: 30px;
+}
+
+#tituloclave{
+  margin-right: 18px;
+}
+
+#clave{
+  margin-left: 5px;
+}
+
+.opciones{
+  text-align: center;
+  color: black;
+}
+
+.restricciones{
+  margin-bottom: 20px;
+}
+
+.restricciones_container {
+  display: flex;
+  justify-content: center;
+}
+
+.restricciones_lista {
+  text-align: left;
+  display: inline-block;
+}
+
+.boton{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 30px;
+  border: 1px;
+  border-radius: 8px;
+  background-color: #d0a781;
+  color: whitesmoke;
+  font-weight: bold;
+  padding: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
+  cursor:pointer;
+  text-decoration: none;
+}
+
+.boton:hover{
+  background-color: #e3c3a4; 
+}
+
+@media screen and (max-width: 700px) {
+  .caja{width: 40%;}
+}
+
+

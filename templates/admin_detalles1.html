@@ -1,0 +1,31 @@
+<!-- Pantalla 9-->
+
+{% extends "layout.html" %} 
+{% block head %}                                            
+    {{super()}}  
+    <link rel="stylesheet" href="../static/css/_admin_detalles1.css">
+{% endblock %}
+
+    {% block content %}
+       <main>
+            <h2 class="subtitulo"> Lista de pedidos</h2>
+
+            <div class="pill-nav">
+                <a class="active" href="/DetallesPedidos1">Menú del Dia</a>
+                <a href="/DetallesPedidos2">Menú Especial</a>
+                <a href="/DetallesPedidos3">Menú Personalizado</a>
+            </div>
+
+            <fieldset class="caja">
+                <legend class="titulo">Menú del Dia</legend>
+                <div class="pedidos">
+                    <ul>
+                        <li>13:00 hs - Arias Candela - 49231256 </li>
+                        <li>14:00 hs - Camu Amanda - 49901213</li>
+                        <li>13:00 hs - Garcia Lucas - 35962211 </li>
+                    </ul>
+                </div>
+            </fieldset>
+        </main>
+    {% endblock %}
+    

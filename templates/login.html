@@ -1,0 +1,49 @@
+<!-- Pantalla 1-->
+
+{% extends "layout.html" %} 
+{% block head %}                                            
+    {{super()}}  
+    <link rel="stylesheet" href="../static/css/_login.css">
+{% endblock %}
+
+    {% block content %}
+        <main>
+            <h2 class="subtitulo"> Iniciar Sesión </h2>
+
+            <form name="myForm" action="/signin" onsubmit="return validateForm()" method="post">
+                <div class="flex-container">
+
+                    <div class="dato">
+                        <label for="InputDNI">DNI:</label>
+                        <input type="number" id="InputDNI" name="dni" class="container" placeholder="Ingrese su DNI"> 
+                        <p id="errorDNI" class="error"></p>
+                    </div>
+
+                    <div class="dato">
+                        <label for="Inputclave" id="tituloclave">Clave:</label>
+                        <input type="password" id="Inputclave" name="clave" class="container" placeholder="Ingrese su clave">
+                        <img src="../static/img/mostrar_clave.png" id=imagenojo1 onclick="showPassword()">
+
+                        <p id="errorClave" class="error"></p>
+
+                    </div>
+
+                    <div class="dato">  
+                        <input type="submit" value="Ingresar" class="caja boton">
+                        {% if param and param.get("error_msg_login") %}
+                            <p id="loginMsg" class="error">{{ param.get("error_msg_login") }}</p>
+                        {% endif %}
+                    </div>
+
+                    <div class="regis">
+                        <a href="/registrarse">¿No tenés cuenta? Registrate</a>
+                    </div>
+                </div>
+            </form>
+
+        </main>
+    {% endblock %}
+
+{% block script %}                
+  <script src="../static/js/_login.js"></script>
+{% endblock %}

@@ -1,0 +1,64 @@
+<!-- Pantalla 7-->
+{% extends "layout.html" %} 
+{% block head %}                                            
+    {{super()}}  
+    <link rel="stylesheet" href="../static/css/_admin_inicio.css">
+{% endblock %}
+
+    {% block content %}
+        <main>
+        <h2 class="subtitulo"> Menú del día </h2>
+        <p id="fecha"></p>
+        <div class="menuEspecial">
+           
+            <form action="" method="post">
+                <div class="label"> 
+                <label for="PlatoPrincipal" class="subtitulo2"> Plato Principal: </label> </div>
+                <div class="texto">
+                    <p id="PlatoPrincipal" class="dato"> Milanesa </p> </div>
+                
+                <div class="label"> 
+                    <label for="guarnicion" class="subtitulo2"> Guarnición: </label> </div>
+                <div class="texto">
+                    <p id="guarnicion" class="dato"> Puré </p> </div>
+                
+                <div class="label"> 
+                <label for="bebida" class="subtitulo2"> Bebida: </label> </div>
+                <div class="texto">
+                    <p id="bebida" class="dato"> Coca-Cola </p> </div>
+                
+                <div class="label"> 
+                <label for="postre" class="subtitulo2"> Postre: </label></div>
+                <div class="texto">
+                    <p  id="bebida" class="dato"> Helado </p> </div>
+                
+                <div class="label"> 
+                <label for="observaciones" class="subtitulo2"> Observaciones: </label></div>
+                <div class="texto">
+                <input type="text" id="observaciones" name="observaciones" class="dato"> </div>
+                
+                <div class="label"> 
+                <label for="horario1" class="subtitulo2"> Horario: </label> </div>
+                <div class="texto">
+                <select name="horario" id="horario1">
+                    <option value="seleccione"> Seleccione horario... </option>
+                    <option value="12.00"> 12.00 </option>
+                    <option value="12.30"> 12.30 </option>
+                    <option value="13.00"> 13.00 </option>
+                    <option value="13.30"> 13.30 </option>
+                    <option value="14.00"> 14.00 </option>
+                </select>  </div>
+                
+                <input type="submit" value="Hacer pedido" id="pedir" class="boton">
+            </form>
+        </div>
+
+        <div class="editar">
+            <a href="/ModificarMenu"> Editar Menú </a>
+        </div>
+        </main>
+    {% endblock %}
+
+{% block script %}                
+  <script src="../static/js/_admin_inico.js"></script>
+{% endblock %}

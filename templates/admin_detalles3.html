@@ -1,0 +1,49 @@
+<!-- Pantalla 11-->
+
+{% extends "layout.html" %} 
+{% block head %}                                            
+    {{super()}}  
+    <link rel="stylesheet" href="../static/css/_admin_detalles3.css">
+{% endblock %}
+
+    {% block content %}
+        <main>
+            <h2 class="subtitulo"> Lista de pedidos</h2>
+
+             <div class="pill-nav">
+                <a href="/DetallesPedidos1">Menú del Dia</a>
+                <a href="/DetallesPedidos2">Menú Especial</a>
+                <a class="active" href="/DetallesPedidos3">Menú Personalizado</a>
+            </div>
+       
+
+            <fieldset class="caja">
+                <legend class="titulo">Menú Personalizado</legend>
+                <div class="pedidos">
+                    <ul>
+                        <li>13:00 hs - Legrand Mirtha - 10019156</li>
+                            <div class="datos">
+                                <p>Plato Principal:</p>
+                                <p>Guarnicion:</p>
+                                <p>Bebida:</p>
+                                <p>Postre:</p><br>
+                            </div>
+                        <li>14:00 hs - Norris Lando - 40883123</li>
+                            <div class="datos">
+                                <p>Plato Principal:</p>
+                                <p>Guarnicion:</p>
+                                <p>Bebida:</p>
+                                <p>Postre:</p><br>
+                            </div>
+                        <li>13:00 hs - Colapinto Franco - 43272211</li>
+                            <div class="datos">
+                                <p>Plato Principal:</p>
+                                <p>Guarnicion:</p>
+                                <p>Bebida:</p>
+                                <p>Postre:</p><br>
+                            </div>
+                    </ul>
+                </div>
+            </fieldset>
+        </main>
+    {% endblock %}

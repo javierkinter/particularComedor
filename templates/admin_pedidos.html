@@ -1,0 +1,96 @@
+<!-- Pantalla 8-->
+
+{% extends "layout.html" %} 
+{% block head %}                                            
+    {{super()}}  
+    <link rel="stylesheet" href="../static/css/_admin_pedidos.css">
+{% endblock %}
+
+    {% block content %}
+        <main>
+            <h2 class="subtitulo"> Lista de pedidos
+                <span class="detalle">
+                    <a href="/DetallesPedidos1" class="boton">Detalles</a>
+                </span>
+            </h2>
+            <table>
+                <th>Menú</th>
+                <th>Cantidad</th>
+                    <tr class="section"></tr>
+                        <td>Menú del Día</td>
+                        <td class="cantidad">139</td>
+                    </tr>
+                    <tr class="section"></tr>
+                        <td>Menú Especial</td>
+                        <td class="cantidad">32</td>
+                    </tr>
+                        <tr class="section">
+                            <td colspan="2">Menú Personalizado</td>
+                        </tr>
+                    <tr class="subitem">
+                        <td>Milanesa</td>
+                        <td class="cantidad">21</td>
+                    </tr>
+                    <tr class="subitem">
+                        <td>Fideos</td>
+                        <td class="cantidad">8</td>
+                    </tr>
+                    <tr class="subitem">
+                        <td>Carne</td>
+                        <td class="cantidad">7</td>
+                    </tr>
+                    <tr class="subitem">
+                        <td>Tarta</td>
+                        <td class="cantidad">4</td>
+                    </tr>
+                    <tr class="subitem">
+                        <td>Puré</td>
+                        <td class="cantidad">13</td>
+                        </tr>
+                    <tr class="subitem">
+                        <td>Arroz</td>
+                        <td class="cantidad">9</td>
+                    </tr>
+                    <tr class="subitem">
+                        <td>Papas</td>
+                        <td class="cantidad">11</td>
+                    </tr>
+                    <tr class="subitem">
+                        <td>Ensaladas</td>
+                        <td class="cantidad">7</td>
+                    </tr>
+                    <tr class="subitem">
+                        <td>Agua</td>
+                        <td class="cantidad">11</td>
+                    </tr>
+                    <tr class="subitem">
+                        <td>Coca-Cola</td>
+                        <td class="cantidad">13</td>
+                    </tr>
+                    <tr class="subitem">
+                        <td>Jugo de naranja</td>
+                        <td class="cantidad">12</td>
+                    </tr>
+                    <tr class="subitem">
+                        <td>Aquarius: Pomelo</td>
+                        <td class="cantidad">4</td>
+                    </tr>
+                    <tr class="subitem">
+                        <td>Helado</td>
+                        <td class="cantidad">23</td>
+                    </tr>
+                    <tr class="subitem">
+                        <td>Gelatina</td>
+                        <td class="cantidad">2</td>
+                    </tr>
+                    <tr class="subitem">
+                        <td>Mousse de chocolate</td>
+                        <td class="cantidad">8</td>
+                    </tr>
+                    <tr class="subitem">
+                        <td>Fruta</td>
+                        <td class="cantidad">7</td>
+                    </tr> 
+            </table>
+        </main>
+    {% endblock %}

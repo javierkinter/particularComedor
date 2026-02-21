@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  background-image: url("../img/Fondo.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;    /* no se repite */
+  background-attachment: fixed;    /* mfondo fijo cuando scrollea */
+  background-position: center;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #bbb8ac;
+  position:fixed;
+  height: 100%;
+  overflow:auto;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+  color: whitesmoke;
+}
+ 
+.sidebar a.actual {
+  background-color: #b0c6d9;
+  color: whitesmoke;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #d0a781;
+  color: whitesmoke;
+}
+
+div.head {
+  margin-left: 200px;
+  padding: 1px 16px;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+.menuEspecial{
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid;
+  border-radius: 10px;
+  border-color: #a48467;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 4px;
+  background-color: #ddd9ce;
+}
+
+
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    position: relative;
+    flex-direction: row;
+    overflow-x: auto; /*solo se mueve en horizontal*/
+    overflow-y: hidden;
+    white-space: nowrap; /* hace que este todo en la misma linea*/
+  }
+  .sidebar a {float: left;}
+  div.head {margin-left: 0;}
+  div.content {margin-left: 0;}
+  .menuEspecial{width:90%;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+  #pedir {width: 50%;}
+  div.menuEspecial{width: 100%;}
+}
+
+@media screen and (max-width:1200px) and (min-width:700px){
+  .menuEspecial{width:80%;}
+}
+
+h1 {
+  background-color: #98a88f;
+  padding: 20px;
+  text-align: center;
+  font-family:'Times New Roman', Times, serif;
+  color: whitesmoke;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+main{
+  display: grid;
+  place-items: center;
+  margin: 0;
+  color: black;
+  background-color: #ddd9ce;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.subtitulo{
+  text-align: center;
+  font-size: 25px;
+  color: black;
+  font-family:'Times New Roman', Times, serif;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}

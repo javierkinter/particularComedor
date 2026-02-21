@@ -1,0 +1,52 @@
+<!-- Pantalla 5-->
+{% extends "layout.html" %} 
+
+{% block head %}                                            
+    {{super()}}  
+    <link rel="stylesheet" href="../static/css/_historial_pedidos.css">
+{% endblock %}
+
+    {% block content %}
+        <main>
+        <h2 class="subtitulo"> Historial de pedidos </h2>
+        <fieldset class="caja">
+            <legend class="titulo">Pedido de hoy</legend>
+            <div id="hoy" class="datos">
+                <p>Menu seleccionado: Milanesa con puré</p>
+                <p>Fecha del pedido: 15-09-25 </p>
+            </div>
+        </fieldset>
+        
+        <div class="botones">
+            <button type="button" id="modificar" class="boton" onclick="/PedidoPersonalizado'">Cambiar mi pedido</button>
+            <button type="button" id="cancelar" class="boton" onclick="cancelar()">Cancelar pedido</button>
+        </div>
+
+        <fieldset class="caja">
+                <legend class="titulo">Historial de pedidos</legend>
+                <div class="datos">
+                    <p>Pedido realizado: Fideos con tuco</p>
+                    <p>Fecha del pedido realizado: 09-09-25</p><br>
+                </div>
+
+                <div class="datos">
+                    <p>Pedido realizado: Pollo con papas </p>
+                    <p>Fecha del pedido realizado: 02-09-25</p><br>
+                </div>
+
+                <div class="datos">
+                    <p>Pedido realizado: Ensalada </p>
+                    <p>Fecha del pedido realizado: 14-08-25</p><br>
+                </div>
+
+                <div class="datos">
+                    <p>Pedido realizado: Milanesa con arroz </p>
+                    <p>Fecha del pedido realizado: 12-08-25</p><br>
+                </div>
+        </fieldset>
+        </main>
+    {% endblock %}
+
+{% block script %}                
+  <script src="../static/js/_historial_pedidos.js"></script>
+{% endblock %}

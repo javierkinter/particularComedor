@@ -1,0 +1,30 @@
+<!-- Pantalla 10-->
+
+{% extends "layout.html" %} 
+{% block head %}                                            
+    {{super()}}  
+    <link rel="stylesheet" href="../static/css/_admin_detalles2.css">
+{% endblock %}
+
+    {% block content %}
+            <main>
+            <h2 class="subtitulo"> Lista de pedidos</h2>
+
+              <div class="pill-nav">
+                <a href="/DetallesPedidos1">Menú del Dia</a>
+                <a class="active" href="/DetallesPedidos2">Menú Especial</a>
+                <a href="/DetallesPedidos3">Menú Personalizado</a>
+            </div>
+
+            <fieldset class="caja">
+                <legend class="titulo">Menú Especial</legend>
+                <div class="pedidos">
+                    <ul>
+                        <li>13:00 hs - Miranda Candela - 49011256 - Celiaquia</li>
+                        <li>14:00 hs - Saenz Arturo - 49283123 - Intolerante (lactosa)</li>
+                        <li>13:00 hs - Dohan Lucia - 49262211 - Alergico (mani)</li>
+                    </ul>
+                </div>
+            </fieldset>
+        </main>
+    {% endblock %}

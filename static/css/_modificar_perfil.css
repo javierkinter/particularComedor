@@ -1,0 +1,204 @@
+
+
+.info{
+  text-align: center;
+  margin: 30px;
+  font-size: 15px;
+  color: black;
+}
+
+.caja{
+  display: inline-block;
+  border: 1px solid;
+  border-radius: 10px;
+  border-color: #a48467;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 50px;
+  background-color: #ddd9ce;
+}
+
+p {
+  text-align: center;
+}
+
+.opciones{
+  text-align: center;
+  color: black;
+}
+
+#tituloclave{
+  margin-left: 20px;
+}
+
+#tituloclave2{
+  margin-left: 25px;
+}
+
+.boton {
+  display: inline-block; /* para que botones en fila */
+  padding: 8px 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #d0a781;
+  color: whitesmoke;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.boton:hover {
+  background-color: #e3c3a4;
+}
+
+
+
+
+
+/*datos container*/
+
+.datos_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px; /* menos espacio entre las filas */
+}
+
+.dato_container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 8px; /* espacio entre label y input */
+  margin: 3px;
+}
+
+.dato_container label {
+  text-align: left;
+  width: 130px;
+}
+
+.dato_container .caja {
+  width: 180px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.dato_container img {
+  width: 18px;
+  object-fit: contain;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+
+
+
+/*restricciones container*/
+
+.restricciones_container {
+  display: flex;
+  justify-content: center;
+  gap:10px;
+}
+
+.restricciones_lista {
+  text-align: left;
+  display: inline-block;
+}
+
+.restricciones_lista input,
+.restricciones_lista label {
+  display: inline-block; /* asi estan alineados */
+  margin-top: 15px;
+  margin-bottom: 5px;    /* espacio entre cada renglon */
+}
+
+
+
+.error {
+  color: red;
+  font-size: 16px;
+  margin-top: 2px;
+}
+
+.ok { 
+  color: green; 
+  font-size: 16px;
+  margin-top: 2px;
+}
+
+
+#imagenojo1{
+  cursor: pointer;
+  height: 15px;
+  vertical-align: middle;
+}
+
+#imagenojo2{
+  cursor: pointer;
+  height: 15px;
+  vertical-align: middle;
+}
+
+
+.botones_container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+
+@media (max-width: 900px) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .container {
+    font-size: 14px;
+  }
+
+  .boton {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .caja.boton {
+    font-size: 14px;
+    padding: 40px;
+  }
+
+  .datos_container{gap: 0%;}
+
+  .dato_container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dato_container label {
+    text-align: center;
+    width: auto;
+  }
+
+  .dato_container .caja {
+    width: 80%;
+  }
+
+  .caja.boton {
+    margin: 20px auto;
+    padding: 8px;
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  #tituloclave, #tituloclave2{margin: 0%;}
+  .restricciones_lista label {
+  display: inline;
+  }
+
+  #observaciones{width:40%}
+}
+
+

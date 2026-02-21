@@ -1,0 +1,107 @@
+<!-- Pantalla 6-->
+
+{% extends "layout.html" %} 
+{% block head %}                                            
+    {{super()}}  
+    <link rel="stylesheet" href="../static/css/_pedido_personalizado.css">
+{% endblock %}
+
+    {% block content %}
+        <main>
+            <h2 class="subtitulo"> Crea tu menú </h2>
+            <div id=menu class="caja">
+                <form action="" onsubmit="return pedidoEnviado(event)" onreset="limpiarErrores()" method="post">
+                    <div class="menu">
+                        <div class="label"><label for="PlatoPrincipal" class="categoria"> Plato Principal: </label></div>
+                        <div class="texto">
+                            <select name="PlatoPrincipal" id="PlatoP"  class="caja">
+                                <option value=""> Seleccione una opción... </option>
+                                <option value="milanesa"> Milanesa </option>
+                                <option value="fideos"> Fideos </option>
+                                <option value="carne"> Carne </option>
+                                <option value="tarta"> Tarta </option>
+                            </select>
+                        </div>   
+                        <p id="errorPlatoPrincipal" class="error"></p>
+                    </div>
+
+                    <div class="menu">
+                        <div class="label"><label for="guarnición" class="categoria"> Guarnición: </label> </div>
+                        <div class="texto">
+                            <select name="guarnición" id="Guarnición" class="caja">
+                                <option value=""> Seleccione una opción... </option>
+                                <option value="puré"> Puré </option>
+                                <option value="arroz"> Arroz </option>
+                                <option value="papas"> Papas </option>
+                                <option value="ensalada"> Ensalada </option>
+                            </select>
+                        </div>
+                        <p id="errorGuarnición" class="error"></p>
+                    </div>
+
+                    <div class="menu">
+                        <div class="label"><label for="bebida" class="categoria"> Bebida: </label> </div>
+                        <div class="texto">
+                            <select name="bebida" id="Bebida" class="caja">
+                                <option value=""> Seleccione una opción... </option>
+                                <option value="agua"> Agua </option>
+                                <option value="coca"> Coca-Cola </option>
+                                <option value="jugo"> Jugo de naranja </option>
+                                <option value="aquarius"> Aquarius </option>
+                            </select>
+                        </div>
+                        <p id="errorBebida" class="error"></p>
+                    </div>
+
+                    <div class="menu">
+                        <div class="label"><label for="postre" class="categoria"> Postre: </label> </div>
+                        <div class="texto">
+                            <select name="postre" id="Postre" class="caja">
+                                <option value=""> Seleccione una opción... </option>
+                                <option value="helado"> Helado </option>
+                                <option value="gelatina"> Gelatina </option>
+                                <option value="mousse"> Mousse de chocolate </option>
+                                <option value="fruta"> Fruta </option>
+                            </select>
+                        </div>
+                        <p id="errorPostre" class="error"></p>
+                    </div>
+
+                    <div class="menu">
+                        <div class="label"><label class="categoria"> Horario: </label></div>
+                        <div class="texto">
+                            <select name="horario" id="horario1" class="caja">
+                                <option value=""> Seleccione una opción... </option>
+                                <option value="12.00"> 12.00 </option>
+                                <option value="12.30"> 12.30 </option>
+                                <option value="13.00"> 13.00 </option>
+                                <option value="13.30"> 13.30 </option>
+                                <option value="14.00"> 14.00 </option>
+                            </select>
+                        </div>
+                        <p id="errorHorario" class="error"></p>
+                    </div>
+                    
+                    <div class="menu">
+                        <div class="label"> 
+                            <label for="observaciones" class="categoria"> Observaciones: </label>
+                        </div>
+                        <div class="texto">
+                            <input type="text" id="observaciones" name="observaciones" class="caja">
+                        </div>
+                    </div>
+
+                    <div class="botones">
+                        <input type="submit" id="enviar" name="enviar" value="Enviar pedido" class="boton">
+                        <input type="reset" id="borrar" name="borrar" value="Borrar pedido" class="boton">
+                    </div>
+                    <p id="Pedido" class="enviado"></p>
+                </form>
+            </div>
+        </main>
+    {% endblock %}
+
+{% block script %}                
+  <script src="../static/js/_pedido_personalizado.js"></script>
+{% endblock %}
+

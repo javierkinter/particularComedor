@@ -1,0 +1,108 @@
+
+.dato {
+  font-size: 15px;
+  color: black;
+  text-align: center;
+  margin: 20px;
+}
+
+.regis {
+  font-size: 15px;
+  text-align: center;
+  text-decoration: underline;
+  margin: 20px;
+}
+
+a {
+  color: #6d8090;
+}
+
+.flex-container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+} 
+
+.container {
+  border: 1px solid;
+  border-radius: 10px;
+  border-color: #a48467;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 50px;
+  background-color: #ddd9ce;
+}
+
+
+.boton{
+  border: 1px;
+  border-radius: 8px;
+  background-color: #d0a781;
+  color: whitesmoke;
+  font-weight: bold;
+  padding: 10px;
+  padding-left: 20%;
+  padding-right: 20%; 
+  cursor:pointer;
+}
+
+.boton:hover{
+  background-color: #e3c3a4; 
+}
+
+#tituloclave{
+  margin-left: 14px;
+}
+
+.error {
+  color: red;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+#imagenojo1{
+  cursor: pointer;
+  height: 15px;
+  vertical-align: middle;
+}
+
+@media (max-width: 900px) {
+  .flex-container {
+    flex-direction: column;
+  }
+   h1 {
+    font-size: 24px;
+    padding: 15px;
+  }
+
+  .subtitulo {
+    font-size: 20px;
+  }
+
+  .container {
+    font-size: 14px;
+  }
+
+  .boton {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+    h1 {
+    font-size: 20px;
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  .subtitulo {
+    font-size: 18px;
+  }
+
+  .boton {
+    font-size: 14px;
+    padding: 10px;
+  }
+} 

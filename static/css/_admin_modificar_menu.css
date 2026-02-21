@@ -1,0 +1,104 @@
+
+#menu.contenedor {
+  width:50%;
+  margin: 18px auto; /*centra la caja respecto al ancho del div.content*/
+  text-align: center;
+  display: block;
+  border: 1px solid;
+  border-radius: 10px;
+  border-color: #a48467;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  background-color: #ddd9ce;
+  margin-bottom: 40px;
+}
+
+.menu{
+  margin-top: 10px;
+  text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+  #menu.contenedor{ width: 90%; margin:3%; padding: 10px;}
+  #menu .label{display:block; width: 100%; margin-left: 0;}
+  #menu .texto{display:block; width: 100%; margin-left: 0;}
+  .botones{text-align: center; margin-top: 12px;}
+}
+
+@media screen and (max-width: 400px) {
+  #menu{width:90%;}
+  #menu.contenedor{ width: 90%; margin:3%; padding: 10px;}
+  #menu .label{display:block;width: 100%;margin-left: 0;}
+  #menu .texto{display:block;width: 100%;margin-left: 0;}
+  .botones{text-align: center; margin-top: 12px;}
+}
+
+.categoria{
+  text-align: left;
+  font-size: 17px;
+  color: black;
+  font-family:'Times New Roman', Times, serif;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.label{
+  width: 50%;
+  text-align: left;
+  display: inline-block;
+  margin: 3px;
+  margin-left: 20px;
+}
+
+.texto{
+  width: 40%;
+  text-align: left;
+  display: inline-block;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 17px;
+  color: black;
+}
+
+.caja{
+  display: block;
+  width: 100%;
+  border: 1px solid;
+  border-radius: 10px;
+  border-color: #a48467;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  background-color: #ddd9ce;
+}
+
+.boton{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px;
+  border-radius: 8px;
+  background-color: #d0a781;
+  color: whitesmoke;
+  font-weight: bold;
+  padding: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
+  cursor:pointer;
+}
+
+.boton:hover{
+  background-color: #e3c3a4; 
+}
+
+.error {
+  color: red;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.enviado {
+  color: green;
+  font-size: 16px;
+  margin-top: 8px;
+  font-weight: bold;
+}

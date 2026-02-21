@@ -1,0 +1,87 @@
+{% extends "layout.html" %}           <!-- Hereda el layout base layout.html -->
+
+{% block head %}                            <!-- Bloque head para incluir estilos específicos -->                   
+    {{super()}}                             
+    <link rel="stylesheet" href="../static/css/_inicio.css">   
+{% endblock %}
+
+    {% block content %}
+        <main>
+            <h2 class="subtitulo"> Menú del día </h2>
+            <p id="fecha"></p>
+                
+            <div class="menuEspecial">
+                <form action="/inicio" onsubmit="return pedidoEnviado(event)" method="post">
+                    <div class="label"> 
+                        <label for="PlatoPrincipal" class="subtitulo2"> Plato Principal: </label>
+                    </div>
+                    <div class="texto">
+                        <p id="PlatoPrincipal" class="dato"> {{ param.menuDia.nombre_plato }} </p>
+                    </div> 
+                    
+                    <div class="label"> 
+                        <label for="guarnicion" class="subtitulo2"> Guarnición: </label> 
+                    </div>
+                    <div class="texto">
+                        <p id="guarnicion" class="dato"> {{ param.menuDia.nombre_guarnicion }} </p> 
+                    </div>
+                    
+                    <div class="label"> 
+                        <label for="bebida" class="subtitulo2"> Bebida: </label>
+                    </div>
+                    <div class="texto">
+                        <p id="bebida" class="dato"> {{ param.menuDia.nombre_bebida }} </p>
+                    </div>
+                    
+                    <div class="label"> 
+                        <label for="postre" class="subtitulo2"> Postre: </label>
+                    </div>
+                    <div class="texto">
+                        <p  id="postre" class="dato"> {{ param.menuDia.nombre_postre }} </p>
+                    </div>
+                    
+                    <div class="label"> 
+                    <label for="horario1" class="subtitulo2"> Horario: </label> </div>
+                    <div class="texto">
+                    <select name="horario" id="horario1">
+                        <option value=""> Seleccione horario... </option>
+                        <option value="12.00"> 12.00 </option>
+                        <option value="12.30"> 12.30 </option>
+                        <option value="13.00"> 13.00 </option>
+                        <option value="13.30"> 13.30 </option>
+                        <option value="14.00"> 14.00 </option>
+                    </select></div>
+                    <p id="errorHorario" class="error"></p>
+
+
+                    <div class="label"> 
+                        <label for="observaciones" class="subtitulo2"> Observaciones: </label>
+                    </div>
+                    <div class="texto">
+                        <input type="text" id="observaciones" name="observaciones" class="dato">
+                    </div>
+                    
+                    <input type="submit" value="Hacer pedido" id="pedir" class="boton">
+                    <p id="Pedido" class="enviado"></p>
+
+                </form>
+            </div>
+
+            <div class="personalizar">
+                <a href="/PedidoPersonalizado"> Para crear tu pedido hacer clic aquí</a>
+            </div>
+        </main>     
+         
+    {% endblock %}
+
+{% block script %}                
+  <script src="../static/js/_inicio.js"></script>
+{% endblock %}
+
+
+
+
+
+
+
+

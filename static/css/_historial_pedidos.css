@@ -1,0 +1,48 @@
+
+.titulo{
+  padding: 25px;
+  font-family: 'Trebuchet MS', sans-serif;
+  color: #a48467;
+  font-size: 20px;
+}
+
+.datos{
+  font-family: 'Trebuchet MS', sans-serif;
+  color: black;
+  font-size: 15px;
+}
+
+.botones{
+  text-align: center;
+}
+.boton{
+  border: 1px;
+  border-radius: 8px;
+  background-color: #d0a781;
+  color: whitesmoke;
+  font-weight: bold;
+  padding: 10px;
+  margin: 10px;
+  cursor:pointer;
+}
+
+.boton:hover{
+  background-color: #e3c3a4; 
+}
+
+.caja{
+  width: 90%;
+  border: 1px solid;
+  border-color: #a48467;
+  border-radius: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 50px;
+}
+
+@media screen and (max-width: 700px) {
+  .caja{width: 80%;}
+}
+
+@media screen and (max-width: 400px) {
+}

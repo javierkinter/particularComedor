@@ -1,0 +1,107 @@
+<!-- Pantalla 2-->
+{% extends "layout.html" %} 
+{% block head %}                                            
+    {{super()}}  
+    <link rel="stylesheet" href="../static/css/_modificar_perfil.css">
+{% endblock %}
+
+    {% block content %}
+        <main>
+            <h2 class="subtitulo"> Modificar Perfil </h2></br>
+            
+            <form name="FormRegistrarse" onsubmit= "return validateFormRegistrarse()" method="post">
+                <div class="datos_container">
+                    <div class="info dato_container">
+                        <label for="Inputnombre">Nombre: </label>
+                        <input type="text" id="Inputnombre" name="nombre" class="caja" placeholder={{ session.get("nombre","") }}></br>
+                    </div>
+                    <p id="errorNombre" class="error"></p>
+
+                    <div class="info dato_container">
+                        <label for="Inputapellido">Apellido: </label>
+                        <input type="text" id="Inputapellido" name="apellido" class="caja" placeholder={{ session.get("apellido","") }}></br>                       
+                    </div>
+                    <p id="errorApellido" class="error"></p>
+
+                    <div class="info dato_container">
+                        <label for="InputDNI">DNI: </label>
+                        <input type="number" id="InputDNI" name="dni" value="{{ session.get("dni","") }}" class="caja" readonly></br>                    
+                    </div>
+
+                    <div class="info dato_container">
+                        <label for="Inputclave0" id="tituloclave">Clave: </label>
+                        <input type="password" id="Inputclave1" name="clave0" class="caja" placeholder="Ingrese su clave">
+                        <img src="../static/img/mostrar_clave.png" id=imagenojo1 onclick="showPassword1()">
+                    </div>
+                    <p id="errorClave0" class="error"></p>
+
+                    <div class="info dato_container">
+                        <label for="Inputclave1" id="tituloclave">Clave nueva: </label>
+                        <input type="password" id="Inputclave1" name="clave1" class="caja" placeholder="Ingrese su clave nueva">
+                        <img src="../static/img/mostrar_clave.png" id=imagenojo1 onclick="showPassword1()">
+                    </div>
+                    <p id="errorClave1" class="error"></p>
+
+                    <div class="info dato_container">
+                        <label for="Inputclave2" id="tituloclave2">Confirmar clave nueva: </label>
+                        <input type="password" id="Inputclave2" name="clave2" class="caja" placeholder="Confirme su clave nueva">
+                        <img src="../static/img/mostrar_clave.png"  id=imagenojo2 onclick="showPassword2()">
+
+                    </div>
+                    <p id="errorClave2" class="error"></p>
+                    <p id="errorClave" class="error"></p>
+                    <p id="errorForm" class="error"></p>
+
+                    <div class="info dato_container">
+                        <label for="roles">Tipo de usuario: </label>
+                        <select id="roles" name="tipo_usuario" class="caja opciones">
+                            <option value="usuario">Usuario</option>
+                        </select><br>
+                    </div>
+                </div>
+
+                <div class="info">
+                    <label for="restricciones">Indique su(s) restriccion(es):</label><br>
+                    <div class="restricciones_container">
+                        <div class="restricciones_lista">
+
+                            <input type="checkbox" id="restriccion1" value="celiaco" class="restricciones" {% if 'celiaco' in param.get('restricciones', []) %}checked{% endif %}>
+                            <label for="restriccion1" id="celiaco">Celiaco</label><br>
+
+                            <input type="checkbox" id="restriccion2" value="vegano" class="restricciones" {% if 'vegano' in param.get('restricciones', []) %}checked{% endif %}>
+                            <label for="restriccion2" id="vegano">Vegano</label><br>
+
+                            <input type="checkbox" id="restriccion3" value="vegetariano" class="restricciones" {% if 'vegetariano' in param.get('restricciones', []) %}checked{% endif %}>
+                            <label for="restriccion3" id="vegetariano">Vegetariano</label><br>
+
+                            <input type="checkbox" id="restriccion4" class="restricciones" {% if param.get('obs_usuario','')|trim != '' %}checked{% endif %}>
+                            <label for="restriccion4">Observaciones (intolerancias, alergias, etc.):</label>
+
+                            <input type="text" id="observaciones" class="caja" value="{{ param.get('obs_usuario','') }}">
+
+                            <p id="errorObs" class="error"></p><br>
+                        </div>
+                        
+                    </div>
+                    <div class="botones_container">
+                        <input type="submit" name="registro" value="Confirmar" class="caja boton">
+                        <a href="/login" name="cancelar"  class="caja boton">Cancelar</a>
+                    </div>
+
+                    {% if param and param.get('error_msg_register') %}
+                    <p id="Msg" class="error">{{ param.get('error_msg_register') }}</p>
+                    {% endif %}
+
+                    {% if param and param.get('succes_msg_register') %}
+                    <p id="Msg" class="ok">{{ param.get('succes_msg_register') }}</p>
+                    {% endif %}
+
+                </div>
+            </form>
+        </main>
+
+    {% endblock %}
+
+{% block script %}                
+  <script src="../static/js/_modificar_perfil.js"></script>
+{% endblock %}

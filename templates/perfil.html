@@ -1,0 +1,63 @@
+<!-- Pantalla 4-->
+
+{% extends "layout.html" %} 
+{% block head %}                                            
+    {{super()}}  
+    <link rel="stylesheet" href="../static/css/_perfil.css">
+{% endblock %}
+
+    {% block content %}
+        <main>
+            <h2 class="subtitulo"> Mi perfil </h2>
+
+                <div class="info">
+                    <label>Nombre: </label>
+                    <input type="text" id="nombre" name="nombre" value="{{ session.get("nombre","") }}" class="caja" readonly><br>
+                </div>
+
+                <div class="info">
+                    <label>Apellido: </label>
+                    <input type="text" id="apellido" name="apellido" value="{{ session.get("apellido","") }}" class="caja" readonly><br>
+                </div>
+                
+                <div class="info">
+                    <label>DNI: </label>
+                      <input type="text" id="dni" name="dni" value="{{ session.get("DNI","") }}" class="caja" readonly><br>
+                </div>
+
+                <div class="info">
+                    <label for="roles">Tipo de usuario: </label>
+                    <select id="roles" name="roles" class="caja opciones">
+                        <option value="usuario">Usuario</option>
+                    </select><br>
+                </div>
+
+                <div class="info">
+
+                    <label for="restricciones">Mis restriccion(es):</label><br>
+
+                    <div class="restricciones_container">
+                        <div class="restricciones_lista">
+
+                            <input type="checkbox" id="restriccion1" value="celiaco" class="restricciones" {% if 'celiaco' in param.get('restricciones', []) %}checked{% endif %}disabled>
+                            <label for="restriccion1" id="celiaco">Celiaco</label><br>
+
+                            <input type="checkbox" id="restriccion2" value="vegano" class="restricciones" {% if 'vegano' in param.get('restricciones', []) %}checked{% endif %}disabled>
+                            <label for="restriccion2" id="vegano">Vegano</label><br>
+
+                            <input type="checkbox" id="restriccion3" value="vegetariano" class="restricciones" {% if 'vegetariano' in param.get('restricciones', []) %}checked{% endif %}disabled>
+                            <label for="restriccion3" id="vegetariano">Vegetariano</label><br>
+
+                            <input type="checkbox" id="restriccion4" class="restricciones" {% if param.get('obs_usuario','')|trim != '' %}checked{% endif %}disabled>
+                            <label for="restriccion4">Observaciones (intolerancias, alergias, etc.):</label>
+
+                            <input type="text" id="observaciones" class="caja" value="{{ param.get('obs_usuario','') }}"readonly>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            <a href="/ModificarPerfil" class="boton">Modificar mis datos</a>
+
+        </main>
+    {% endblock %}

@@ -1,0 +1,68 @@
+
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+th, td {
+    border: 1px solid #98A88F;
+    padding: 1.5%;
+    text-align: left;
+}
+
+th {
+    background-color: #9eafdd;
+    text-align: center;
+    font-size: 16px;
+ }
+
+/* Filas de secciones */
+.section {
+    background-color: #e0e4f2;
+    font-weight: bold;
+    text-align: left;
+    font-size: 15px;
+}
+
+/* Subitems dentro de "Menú Personalizado" */
+.subitem td:first-child {
+    padding-left: 40px;
+}
+
+ /* Hover lindo */
+ tr:hover td {
+    background-color: #f2f7ff;
+}
+
+    
+.detalle {
+  font-size: 15px;
+  color: rgb(77, 77, 155);
+  /* text-align: center; */
+  text-decoration: underline;
+  margin: 20px;
+}
+
+.cantidad {
+  text-align: center;
+  color: #4b65ac;
+}
+
+.boton{
+  border: 1px;
+  border-radius: 8px;
+  background-color: #d0a781;
+  color: whitesmoke;
+  font-weight: bold;
+  padding: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
+  cursor:pointer;
+}
+
+@media screen and (max-width: 400px) {
+  table{width: 92%;}
+}

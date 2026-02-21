@@ -1,0 +1,38 @@
+<!-- Layout-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+        <title>
+            {% block title %} 
+                {% if param %}
+                    {{param.get('page-title')}} 
+                {% endif %}
+            {% endblock %}
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../static/css/_layout.css">
+        <link rel="stylesheet" href="../static/css/_sidebar.css">
+    {% endblock %}   
+</head>
+<body class="{% if not show_sidebar %}no-sidebar{% endif %}">
+
+    {% if show_sidebar %}
+        {% include "sidebar.html" %}
+    {% endif %}
+      
+            <div class="head">                
+                {% block header %} 
+                    <h1>Comedor Colegio Montoya</h1>                     
+                {% endblock %}
+            </div>
+
+            <div class="content">
+                {% block content %}{% endblock %}
+            </div>
+
+  {% block script %}{% endblock %}
+</body>
+
+</html>

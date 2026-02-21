@@ -1,0 +1,17 @@
+<nav class="sidebar">
+    <div class="sidebar-user">Hola {{ session.get("nombre","") }}!</div>
+
+  {% if session.get("tipo_usuario") == "usuario" %}
+    <a class="{% if request.path in ['/', '/inicio'] %}actual{% endif %}" href="/inicio">Inicio</a>
+    <a class="{% if request.path == "/MiPerfil" %}actual{% endif %}" href="/MiPerfil">Mi perfil</a>
+    <a class="{% if request.path == "/MisPedidos" %}actual{% endif %}" href="/MisPedidos">Mis pedidos</a>
+    <a class="{% if request.path == "/PedidoPersonalizado" %}actual{% endif %}" href="/PedidoPersonalizado">Hacer un pedido</a>
+
+  {% elif session.get("tipo_usuario") == "admin" %}
+    <a class="{% if request.path == "/inicio" %}actual{% endif %}" href="/inicio">Inicio</a>
+    <a class="{% if request.path == "/Pedidos" %}actual{% endif %}" href="/Pedidos">Pedidos</a>
+    <a class="{% if request.path == "/ModificarMenu" %}actual{% endif %}" href="/ModificarMenu">Modificar menú</a>
+  {% endif %}
+
+  <a href="/logout">Salir</a>
+</nav>
